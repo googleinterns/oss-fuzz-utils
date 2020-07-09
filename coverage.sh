@@ -8,7 +8,7 @@
 # Please ensure that oss-fuzz-utils and oss-fuzz are sibling directories,
 # and run coverage.sh from within the oss-fuzz-utils directory.
 #
-# Optional: place a base corpus for the project in oss-fuzz/corpora/$proj_name.
+# Optional: place a corpus for the project in oss-fuzz/corpora/$proj_name.
 # This corpus will be used as a basis for each fuzzer's individual corpus.
 
 function usage {
