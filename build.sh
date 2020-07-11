@@ -9,6 +9,7 @@ function usage {
   exit 1
 }
 
+null_out="/dev/null" > $null_out
 pushd ../oss-fuzz
 project_name=$1
 [[ -z "$project_name" ]] && usage
@@ -17,4 +18,4 @@ sudo rm -rf ./build/out/${project_name}
 clear
 yes | sudo python3 infra/helper.py build_image $project_name
 sudo python3 infra/helper.py build_fuzzers $project_name
-popd
+popd > $null_out
